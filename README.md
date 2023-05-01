@@ -23,7 +23,9 @@ Link to DANDI (will be available soon).
 
 #### Google Drive (original format)
 
-Link to the Google Drive: https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing
+Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing)
+
+**Notes:**
 
 - The `/Data` folder on the Google Drive contains 33 folders, each folder corresponding to an animal investigated in this study.
 
