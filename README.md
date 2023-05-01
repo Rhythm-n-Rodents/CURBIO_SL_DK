@@ -46,7 +46,7 @@ Link: Google Drive
 
 - In each animal folder (ex. `SLR087`) these data files are available:
 
-  - `<session_ID>_D_36data.mat` is the **main time series data** used for analysis. The shape of the matrix should be (*number of timestep sampled at 2kHz*, *36*), abbreviated as the `36data`. The variables stored in each column are described below:
+  - `<session_ID>_D_36data.mat` is the **main time series data** used for analysis. The shape of the matrix should be (*number of timestep sampled at 2kHz*, *36*), abbreviated as the `36data`. The variables stored in each column are described below. Information of the EMG envelope channels (columns 3-6) are listed in the **Appendix** section below.
   
   
     | | Variable |  | Variable |  | Variable |  | Variable |
@@ -62,8 +62,6 @@ Link: Google Drive
     | 9 | **Head yaw angle** | 19 | Torso pitch angle | 29 | Head roll velocity |  |  |
     | 10 | **Head pitch angle** | 20 | N/A | 30 | Torso yaw velocity |  |  |
 
-    
-  
   - `<session_ID>_D_LCmat.mat` is the raw data exported from LabChart (the data acquisition system). The signals were processed and stored as part of the `36data`.
   
   - `<session_ID>_D_video.avi` is the recorded video of the session.
@@ -111,3 +109,44 @@ Codes (MATLAB) are available in the `/Scripts` folder, which contains 3 subfolde
 
 6. You can start running the codes and see the figures.
 
+
+## Appendix
+
+Information of the EMG envelope channels (columns 3-6 in `36data`). Only animals with EMG recordings are listed. Please also see Table S1 in the paper.
+
+
+
+| Animal ID | EMG envelope #1 | EMG envelope #2 | EMG envelope #3 | EMG envelope #4 |
+| ----------- | ----------- | ----------- | ----------- | ----------- | 
+| SLR094 | RSP | RSP | LSP | LSP |
+| SLR096 | RCT | RSP | LSP | LCT |
+| SLR097 | RCT | RSP | LSP | LCT |
+| SLR099 | LVI | LNL | RNL | RDN |
+| SLR100 | LNS | LDN | RDN | RDN |
+| SLR102 | RCT | RCT | LCT | LCT |
+| SLR103 | RCT | RCT | LCT | LCT |
+| SLR105 | RCT | RCT | LCT | LCT |
+| SLR106 | RCT | RCT | LCT | LCT |
+| SLR107 | LCM | N/A | N/A | RCM |
+| SLR108 | LCM | N/A | RCM | N/A |
+| SLR110 | LCM | LSM | RCM | RSM |
+| SLR111 | LCM | LSM | RCM | RSM |
+| SLR112 | RSP | RBC | LBC | LSP |
+| SLR113 | RSP | LSP | RBC | LBC |
+| SLR114 | RSM | RSM | LSM | LSM |
+| SLR115 | RSP | LSP | RBC | LBC |
+| SLR116 | LVI | RVI | LDN | RDN |
+| SLR117 | LVI | RVI | LDN | RDN |
+| SLR119 | LSM | LCM | LCT | LSP |
+| SLR120 | LDN | LCT | LSP | LBC |
+| SLR121 | LDN | LCT | LSP | LBC |
+| SLR122 | LDN | LSM | LCM | LCT |
+| SLR123 | LCM | LCT | LBC | LSM |
+| SLR124 | LCM | LSP | LBC | LSM |
+| SLR125 | LVI | RVI | LNL | RNL |
+| SLR126 | LVI | RVI | LNL | RNL |
+
+
+<p align="center">
+Abbreviations. L: left side, R: right side, SM: sternomastoid, CM: cleidomastoid, CT: clavotrapezius, SP: splenius, BC: biventer cervicis, VI: vibrissa intrinsic, NL: nasolabialis, DN: deflector nasi, NS: nasalis (analysis for nasalis is not published). 
+</p>
