@@ -17,11 +17,11 @@ Graphical abstract (source: https://ars.els-cdn.com/content/image/1-s2.0-S096098
 
 Data can be downloaded from the following two sources:
 
-#### DANDI (NWB format)
+### 1. DANDI (NWB format)
 
 Link to DANDI (will be available soon).
 
-#### Google Drive (original format)
+### 2. Google Drive (original format)
 
 Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing)
 
