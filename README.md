@@ -19,9 +19,7 @@ Data can be downloaded from the following two sources:
 
 #### DANDI (NWB format)
 
-Link: DANDI
-
-The link will be available soon.
+Link to DANDI (will be available soon).
 
 #### Google Drive (original format)
 
@@ -46,13 +44,13 @@ Link: Google Drive
 
 - In each animal folder (ex. `SLR087`) these data files are available:
 
-  - `<session_ID>_D_36data.mat` is the **main time series data** used for analysis. The shape of the matrix should be (*number of timestep sampled at 2kHz*, *36*), abbreviated as the `36data`. The variables stored in each column are described below. Information of the EMG envelope channels (columns 3-6) are listed in the **Appendix** section below.
+  - `<session_ID>_D_36data.mat` is the **main time series data** used for analysis. The shape of the matrix should be (*number of timestep sampled at 2kHz*, *36*), abbreviated as the `36data`. The variables stored in each column are described below (variables that were frequently studied are displayed **in Bold**). Information of the EMG envelope channels (columns 3-6) are listed in the **Appendix** section below.
   
   
     | | Variable |  | Variable |  | Variable |  | Variable |
     | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
     | 1 | **Time** | 11 | Head roll angle | 21 | Torso acceleration Ax | 31 | Torso pitch velocity |
-    | 2 | Breathing before high-pass | 12 | Head acceleration Ax | 22 | Torso acceleration Ay | 32 | Torso roll velocity |
+    | 2 | N/A | 12 | Head acceleration Ax | 22 | Torso acceleration Ay | 32 | Torso roll velocity |
     | 3 | **EMG envelope #1** | 13 | Head acceleration Ay | 23 | Torso acceleration Az | 33 | **Head-torso yaw velocity** |
     | 4 | **EMG envelope #2**| 14 | Head acceleration Az | 24 | Torso angular velocity Wx | 34 | Head-torso pitch velocity |
     | 5 | **EMG envelope #3** | 15 | Head angular velocity Wx | 25 | Torso angular velocity Wy | 35 | Head-torso roll velocity |
