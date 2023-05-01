@@ -103,7 +103,7 @@ Codes (MATLAB) are available in the `/Scripts` folder, which contains 3 subfolde
 
 4. Add the path to the subfolder `/CURBIO/Scripts/utils` into the MATLAB.
 
-5. Download all data from the Google Drive and place the folder `/Data` under the same working folder (/CURBIO/Data). Notes: Currently the codes do not support the NWB format data. Please download the data from Google Drive if you want to run the codes.
+5. Download all data from the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing) and place the folder `/Data` under the same working folder (/CURBIO/Data). Notes: Currently the codes do not support the NWB format data. Please download the data from Google Drive if you want to run the codes.
 
 6. You can start running the codes and see the figures.
 
