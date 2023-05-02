@@ -4,6 +4,7 @@ Repository of the article **A change in behavioral state switches the pattern of
 
 Link to the paper: https://www.sciencedirect.com/science/article/pii/S0960982223004566
 
+---
 
 <p align="center">
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0960982223004566-fx1.jpg" />
