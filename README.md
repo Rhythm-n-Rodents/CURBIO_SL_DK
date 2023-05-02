@@ -78,7 +78,9 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
     
 - In some selected animal folders these data files are available:
 
-  - `A_<animal ID>_annotation_epochs_transposed.xlsx` contains the start/end frames and the location of the food pellet of each foraging trial.
+  - `A_<animal ID>_annotation_epochs.xlsx` contains the start/end frames and the location of the food pellet of each foraging trial.
+
+  - `A_<animal ID>_annotation_epochs_transposed.xlsx` is a transposed version of `A_<animal ID>_annotation_epochs.xlsx` solely for the purpose of NWB data conversion.
   
   - `<session_ID>_D_videlDLC_torso.csv` contains the coordinates of the torso using the [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) package.
   
@@ -86,7 +88,7 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
 
 ## Code
 
-Codes (MATLAB) are available in the `/Scripts` folder, which contains 3 subfolders:
+Codes (MATLAB) are available in the `/Scripts` folder, which contains the following subfolders:
 
 - `/Scripts/codes_for_figures` contains the codes that can generate the figures. Please see the comments in the files for more information.
 - `/Scripts/codes_for_supplemental_figures` contains the codes that can generate the supplemental figures. Please see the comments in the files for more information.
