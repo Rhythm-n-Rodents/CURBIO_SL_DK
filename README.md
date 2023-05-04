@@ -79,7 +79,7 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
 
   - `A_<animal ID>_annotation_epochs_transposed.xlsx` is a transposed version of `A_<animal ID>_annotation_epochs.xlsx` solely for the purpose of NWB data conversion.
   
-  - `<session_ID>_D_videlDLC_torso.csv` contains the coordinates of the torso using the [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) package.
+  - `<session_ID>_D_videoDLC_torso.csv` contains the coordinates of the torso using the [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) package.
   
   - `<session_ID>_D_arena_ellipse_params.mat` stores the parameters of the boundary of the arena floor observed by the camera.
 
@@ -88,7 +88,24 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
 
 Link to DANDI (will be available soon).
 
+| Data format (Google Drive) | Data format (NWB) | Notes |
+| ----------- | ----------- | ----------- |
+| `<session_id>_D_36data.mat` |  |  |
+| `<session_id>_D_LCmat.mat` |  |  |
+| `<session_id>_D_video.avi` |  |  |
+| `<session_id>_D_excel.xlsx` |  |  |
+| `<session_id>_D_eventLog.mat` | `NWBFile.notes` | Each annotated miscellaneous behavior (ex. grooming) is stored as a tuple of length = 3: (`Unusable Behavior`, `<START_FRAME>`, `<END_FRAME>`). The values refer to the frame indeces of the video file `<session_id>_D_video.avi`. |
+| `<session_ID>_D_videoDLC_torso.csv` |  |  |
+| `<session_ID>_D_arena_ellipse_params.mat` |  |  |
+| `A_<animal ID>_annotation_epochs_transposed.xlsx` | `NWBFile.scratch` | Each supplemental annotation is stored as a tuple of 6 elements: (`EPOCH_START_FRAME`, `EPOCH_END_FRAME`, `EPOCH_STATUS`, `PELLET_LOC_X`, `PELLET_LOC_Y`, `PELLET_STATUS`). |
+| `<animal_id>_D_bBoolsMap.mat` | `NWBFile.analysis` | Stored as a tuple of 3 tuples as the elements: (`tuple_1`, `tuple_2`, `tuple_3`). |
+| `<animal_id>_percentiles_36data.mat` | `NWBFile.processing` | Stored as a tuple of two elements. The first element is a tuple that stores the column from `<session_ID>_D_36data.mat` that used to calculate certain percentile. The second element is a tuple that stores the corresponding values. |
+| `<animal_id>_recordingListMap.mat` | N/A | List of the recording indeces is not required for NWB. Each NWB file is created from a single session |
+| `<animal_id>_videoFrameBoundaries.mat` | `NWBFile.notes` | Stored as a tuple of length = 3: (`Video Boundary`, `<START_FRAME>`, `<END_FRAME>`) that correspond to the first and last sample of `<session_ID>_D_36data.mat`. |
 
+<p align="center">
+Details of data conversion from Google Drive to DANDI.
+</p>
 
 
 
