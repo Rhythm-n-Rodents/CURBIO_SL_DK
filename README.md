@@ -18,11 +18,7 @@ Graphical abstract (source: https://ars.els-cdn.com/content/image/1-s2.0-S096098
 
 Data can be downloaded from the following two sources:
 
-### 1. DANDI (NWB format)
-
-Link to DANDI (will be available soon).
-
-### 2. Google Drive (original format)
+### 1. Download from Google Drive (original format)
 
 Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing)
 
@@ -86,6 +82,17 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
   - `<session_ID>_D_videlDLC_torso.csv` contains the coordinates of the torso using the [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) package.
   
   - `<session_ID>_D_arena_ellipse_params.mat` stores the parameters of the boundary of the arena floor observed by the camera.
+
+
+### 2. Download from DANDI (NWB format)
+
+Link to DANDI (will be available soon).
+
+
+
+
+
+
 
 ## Code
 
