@@ -99,18 +99,18 @@ Link to DANDI (will be available soon).
 
 | Data format (Google Drive) | Data format (NWB) | Notes |
 | ----------- | ----------- | ----------- |
-| `<session_id>_D_36data.mat` |  |  |
-| `<session_id>_D_LCmat.mat` |  |  |
-| `<session_id>_D_video.avi` |  |  |
-| `<session_id>_D_excel.xlsx` |  |  |
-| `<session_id>_D_eventLog.mat` | `NWBFile.notes` | Each annotated miscellaneous behavior (ex. grooming) is stored as a tuple of length = 3: (`Unusable Behavior`, `<START_FRAME>`, `<END_FRAME>`). The values refer to the frame indeces of the video file `<session_id>_D_video.avi`. |
-| `<session_ID>_D_videoDLC_torso.csv` |  |  |
-| `<session_ID>_D_arena_ellipse_params.mat` |  |  |
-| `A_<animal ID>_annotation_epochs_transposed.xlsx` | `NWBFile.stimulus_notes` | Supplemental annotation is stored as a string: `EPOCH_START_FRAME`, `EPOCH_END_FRAME`, `EPOCH_STATUS`, `PELLET_LOC_X`, `PELLET_LOC_Y`, `PELLET_STATUS`, seperated by the `\|` symbol. |
+| `<session_id>_D_36data.mat` | `processing` >> `data_36columns` >> `BehavioralTimeSeries` >> `data_36columns` >> `data` | Stored as a matrix of shape (N, 36). Information of each column can be found in the table of the previous section. |
+| `<session_id>_D_LCmat.mat` | `processing` >> `raw_labchart_data` >> `BehavioralTimeSeries` >> `raw_labchart_data` >> `data` (CHCEK) | Stored as a 1-D array. Multiple columns outputed by LabChart is contactnated [column_1, column_2, ...]. Start and end indeces for each LabChart column is stored in <>. |
+| `<session_id>_D_video.avi` | `acquisition` >> `ImageSeries` >> `external_file` | Stored as a symbolic link to the corresponding recording video. |
+| `<session_id>_D_excel.xlsx` | `processing` >> `raw_sensor_data` >> `BehavioralTimeSeries` >> `raw_sensor_data` >> `data` | Stored as a matrix of shape (num_samples, num_channels). For recording with head sensor only, yaw/pitch/roll angles of the head is stored in the first 3 columns. For recording with both head and torso sensors, y/p/r angles of the torso is stored in the first 3 columns and y/p/r angles of the head is stored in the first 3 columns of the second half of the columns. |
+| `<session_id>_D_eventLog.mat` | `general` >> `notes` | Stored in `NWBFile.notes`. Each annotated miscellaneous behavior (ex. grooming) is stored as a string: `"Unusable Behavior, <START_FRAME>, <END_FRAME>"`, separated by `" \| "`. The values refer to the frame indeces of the video file `<session_id>_D_video.avi`. |
+| `<session_ID>_D_videoDLC_torso.csv` | `acquisition` >> `ImageSeries` >> `external_file` | Stored as a symbolic link to the corresponding csv file of torso tracking (if torso sensor is used). |
+| `<session_ID>_D_arena_ellipse_params.mat` | `acquisition` >> `ImageSeries (comments)` | Stored in the `comments` attribute as a string of the values of the fitted ellipse. |
+| `A_<animal ID>_annotation_epochs_transposed.xlsx` | `general` >> `stimulus` | Supplemental annotation is stored in `NWBFile.stimulus_notes`, as a string of: `EPOCH_START_FRAME`, `EPOCH_END_FRAME`, `EPOCH_STATUS`, `PELLET_LOC_X`, `PELLET_LOC_Y`, `PELLET_STATUS`, seperated by the `\|` symbol. |
 | `<animal_id>_D_bBoolsMap.mat` | `NWBFile.analysis` | Stored as a tuple of 3 tuples as the elements: (`tuple_1`, `tuple_2`, `tuple_3`). |
 | `<animal_id>_percentiles_36data.mat` | `NWBFile.processing` | Stored as a tuple of two elements. The first element is a tuple that stores the column from `<session_ID>_D_36data.mat` that used to calculate certain percentile. The second element is a tuple that stores the corresponding values. |
 | `<animal_id>_recordingListMap.mat` | N/A | List of the recording indeces is not required for NWB. Each NWB file is created from a single session |
-| `<animal_id>_videoFrameBoundaries.mat` | `NWBFile.notes` | Stored as a tuple of length = 3: (`Video Boundary`, `<START_FRAME>`, `<END_FRAME>`) that correspond to the first and last sample of `<session_ID>_D_36data.mat`. |
+| `<animal_id>_videoFrameBoundaries.mat` | `general` >> `notes` | Stored in `NWBFile.notes`. Stored as a string: `"Video Boundary, <START_FRAME>, <END_FRAME>"` to be synchronized with the first and last sample of `<session_ID>_D_36data.mat`. |
 
 <p align="center">
 Details of data conversion from Google Drive to DANDI.
