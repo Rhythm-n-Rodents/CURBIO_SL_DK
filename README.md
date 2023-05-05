@@ -97,7 +97,7 @@ Link to DANDI (will be available soon).
 | `<session_id>_D_eventLog.mat` | `NWBFile.notes` | Each annotated miscellaneous behavior (ex. grooming) is stored as a tuple of length = 3: (`Unusable Behavior`, `<START_FRAME>`, `<END_FRAME>`). The values refer to the frame indeces of the video file `<session_id>_D_video.avi`. |
 | `<session_ID>_D_videoDLC_torso.csv` |  |  |
 | `<session_ID>_D_arena_ellipse_params.mat` |  |  |
-| `A_<animal ID>_annotation_epochs_transposed.xlsx` | `NWBFile.scratch` | Each supplemental annotation is stored as a tuple of 6 elements: (`EPOCH_START_FRAME`, `EPOCH_END_FRAME`, `EPOCH_STATUS`, `PELLET_LOC_X`, `PELLET_LOC_Y`, `PELLET_STATUS`). |
+| `A_<animal ID>_annotation_epochs_transposed.xlsx` | `NWBFile.stimulus_notes` | Supplemental annotation is stored as a string: `EPOCH_START_FRAME`, `EPOCH_END_FRAME`, `EPOCH_STATUS`, `PELLET_LOC_X`, `PELLET_LOC_Y`, `PELLET_STATUS`, seperated by the `\|` symbol. |
 | `<animal_id>_D_bBoolsMap.mat` | `NWBFile.analysis` | Stored as a tuple of 3 tuples as the elements: (`tuple_1`, `tuple_2`, `tuple_3`). |
 | `<animal_id>_percentiles_36data.mat` | `NWBFile.processing` | Stored as a tuple of two elements. The first element is a tuple that stores the column from `<session_ID>_D_36data.mat` that used to calculate certain percentile. The second element is a tuple that stores the corresponding values. |
 | `<animal_id>_recordingListMap.mat` | N/A | List of the recording indeces is not required for NWB. Each NWB file is created from a single session |
