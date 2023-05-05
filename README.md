@@ -18,6 +18,15 @@ Graphical abstract (source: https://ars.els-cdn.com/content/image/1-s2.0-S096098
 
 Data can be downloaded from the following two sources:
 
+1. Download from Google Drive (original format)
+2. Download from DANDI ([NWB](https://www.nwb.org/nwb-neurophysiology/) format)
+
+
+Codes on this repository can be run directly on the data downloaded from Google Drive. Conversion of data from the DANDI (in NWB format) to the original format is needed before running the codes for analysis and figure generation. Conversion code will be available in the folder `/Scripts/nwb_conversion`.
+
+
+---
+
 ### 1. Download from Google Drive (original format)
 
 Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing)
