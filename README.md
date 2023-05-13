@@ -29,7 +29,7 @@ Codes on this repository can be run directly on the data downloaded from Google 
 
 ### 1. Download from Google Drive (original format)
 
-Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing)
+Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing). Please contact the authors for access.
 
 **Notes:**
 
@@ -115,9 +115,6 @@ Link to DANDI (will be available soon).
 <p align="center">
 Details of data conversion from Google Drive to DANDI.
 </p>
-
-
-
 
 
 ## Code
