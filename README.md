@@ -95,7 +95,7 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
 
 ### 2. Download from DANDI (NWB format)
 
-Link to DANDI (will be available soon).
+Link to DANDI [Dandiset](https://dandiarchive.org/dandiset/000540?pos=1).
 
 | Data format (Google Drive) | Data format (NWB) | Notes |
 | ----------- | ----------- | ----------- |
