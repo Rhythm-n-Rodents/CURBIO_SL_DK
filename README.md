@@ -159,16 +159,17 @@ Choose **one** of the two options below to donwload the dataset:
 
 4. Install these packages in the environment:
 
-    a. numpy ([install using conda](https://anaconda.org/anaconda/numpy))\
-    b. pandas ([install using conda](https://anaconda.org/conda-forge/pandas))\
-    c. pynwb ([install using conda](https://anaconda.org/conda-forge/pynwb))\
-    d. xlsxwriter ([install using pip](https://xlsxwriter.readthedocs.io/getting_started.html))\
-    e. scipy ([install using conda](https://anaconda.org/conda-forge/scipy))
+    - numpy ([install using conda](https://anaconda.org/anaconda/numpy))
+    - pandas ([install using conda](https://anaconda.org/conda-forge/pandas))
+    - pynwb ([install using conda](https://anaconda.org/conda-forge/pynwb))
+    - xlsxwriter ([install using pip](https://xlsxwriter.readthedocs.io/getting_started.html))
+    - scipy ([install using conda](https://anaconda.org/conda-forge/scipy))
 
-5. In the terminal, move to the `CURBIO` folder and run `/nwb2mat/run_nwb2mat.py` by the command below. It will create a folder `Data` to stored data
+5. In the terminal, move to the `CURBIO` folder and run `/nwb2mat/run_nwb2mat.py` by the command below. It will create a folder `Data` to store data
 
     ```
     cd <PATH_TO_CURBIO>
+    
     python nwb2mat/run_nwb2mat.py --src_dir ./000540 --dest_dir ./Data
     ```
 
