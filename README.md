@@ -22,7 +22,7 @@ Data can be downloaded from the following two sources:
 2. Download from DANDI ([NWB](https://www.nwb.org/nwb-neurophysiology/) format)
 
 
-Codes on this repository can be run directly on the data downloaded from Google Drive. Conversion of data from the DANDI (in NWB format) to the original format is needed before running the codes for analysis and figure generation. Conversion code will be available in the folder `/Scripts/nwb_conversion`.
+Codes on this repository can be run directly on the data downloaded from Google Drive. Conversion of data from the DANDI (in NWB format) to the original format is needed before running the codes for analysis and figure generation. Conversion code is available in the folder `/nwb2mat`. Instructions are provided in the following sections.
 
 
 ---
@@ -93,6 +93,7 @@ Link to the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpx
   - `<session_ID>_D_arena_ellipse_params.mat` stores the parameters of the boundary of the arena floor observed by the camera.
 
 
+
 ### 2. Download from DANDI (NWB format)
 
 Link to DANDI [Dandiset](https://dandiarchive.org/dandiset/000540?pos=1).
@@ -126,7 +127,9 @@ Codes (MATLAB) are available in the `/Scripts` folder, which contains the follow
 - `/Scripts/utils` contains the helper codes that are called by the other scripts.
 
 
-#### To run the code:
+## How to run the code
+
+### Step 1: Prepare the software and packages
 
 1. Install [MATLAB](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) and the [MATLAB Signal Processing Toolbox](https://www.mathworks.com/products/signal.html).
 
@@ -136,13 +139,46 @@ Codes (MATLAB) are available in the `/Scripts` folder, which contains the follow
 
 4. Add the path to the subfolder `/CURBIO/Scripts/utils` into the MATLAB.
 
-5. Download the dataset.
+### Step 2: Download the dataset
 
-    a. (From Google Drive) Contact the authors for access and download all data from the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing). Place the folder `/Data` under the same working folder that was created in *step 3* (`/CURBIO/Data`). Notes: Currently the codes do not support the NWB format data. Please download the data from Google Drive if you want to run the codes.
-  
-    b. (From DANDI) Download the dataset (Dandiset) from DANDI [Dandiset](https://dandiarchive.org/dandiset/000540?pos=1).
+Choose **one** of the two options below to donwload the dataset:
 
-6. You can start running the codes and see the figures.
+#### Option 1 - Download from Google Drive
+
+1. Contact the authors for access and download all data from the [Google Drive](https://drive.google.com/drive/folders/14tUsFh6X54gpxlsFWoynKT4JRm_1S84h?usp=sharing).
+
+2. Place the folder `/Data` under the same working folder that was created in "Step 1" (i.e., `/CURBIO/Data`).
+
+#### Option 2 - Download from DANDI Archive
+
+1. Download the dataset (Dandiset) from DANDI [Dandiset](https://dandiarchive.org/dandiset/000540?pos=1). Place the folder `/000540` under the working folder (i.e., `/CURBIO/000540`)
+
+2. Download the folder `/nwb2mat` from this repository and place into the same working folder (i.e., `/CURBIO/nwb2mat`).
+
+3. Create a Python virtual environment (for example, using [Anaconda](https://www.anaconda.com/)).
+
+4. Install these packages in the environment:
+
+    a. numpy ([install using conda](https://anaconda.org/anaconda/numpy))\
+    b. pandas ([install using conda](https://anaconda.org/conda-forge/pandas))\
+    c. pynwb ([install using conda](https://anaconda.org/conda-forge/pynwb))\
+    d. xlsxwriter ([install using pip](https://xlsxwriter.readthedocs.io/getting_started.html))\
+    e. scipy ([install using conda](https://anaconda.org/conda-forge/scipy))
+
+5. In the terminal, move to the `CURBIO` folder and run `/nwb2mat/run_nwb2mat.py` by the command below. It will create a folder `Data` to stored data
+
+    ```
+    cd <PATH_TO_CURBIO>
+    python nwb2mat/run_nwb2mat.py --src_dir ./000540 --dest_dir ./Data
+    ```
+
+6. Open and run `/nwb2mat/run_mat2map.m`. It will further process the data in `Data` and complete the full conversion.
+
+Please note that Step 6 must be run after the completion of Step 5.
+
+### Step 3: Perform analysis
+
+You can start running the codes and see the figures in this study.
 
 
 ## Appendix
